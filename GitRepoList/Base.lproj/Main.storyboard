@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dyh-4f-YSG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Git Repo List-->
+        <scene sceneID="vzX-6y-j68">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="kdv-41-Lq8" customClass="GitRepoListTableViewController" customModule="GitRepoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mpj-HC-0sx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="waz-kG-JSF" customClass="TableViewCell" customModule="GitRepoList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="waz-kG-JSF" id="dEO-mx-dSi">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYr-Tr-axe">
+                                            <rect key="frame" x="16" y="11" width="257" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="BlB-le-QAR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-ia-s96">
+                                            <rect key="frame" x="16" y="54" width="343" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="h40-In-oud"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TYr-Tr-axe" secondAttribute="trailing" constant="86" id="9Yo-if-0tZ"/>
+                                        <constraint firstItem="hPb-ia-s96" firstAttribute="trailing" secondItem="dEO-mx-dSi" secondAttribute="trailingMargin" id="E8W-T9-Yhc"/>
+                                        <constraint firstItem="TYr-Tr-axe" firstAttribute="top" secondItem="dEO-mx-dSi" secondAttribute="topMargin" id="WUg-Dn-hFb"/>
+                                        <constraint firstItem="hPb-ia-s96" firstAttribute="top" secondItem="TYr-Tr-axe" secondAttribute="bottom" constant="8" symbolic="YES" id="Y95-cu-LSt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hPb-ia-s96" secondAttribute="bottom" constant="-15" id="eek-hv-ifP"/>
+                                        <constraint firstItem="hPb-ia-s96" firstAttribute="leading" secondItem="TYr-Tr-axe" secondAttribute="leading" id="m7R-gZ-OOJ"/>
+                                        <constraint firstItem="hPb-ia-s96" firstAttribute="leading" secondItem="dEO-mx-dSi" secondAttribute="leadingMargin" id="nCe-NO-Eg4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="repoDescription" destination="hPb-ia-s96" id="jMl-Iy-N90"/>
+                                    <outlet property="repoName" destination="TYr-Tr-axe" id="deW-Rn-Toa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kdv-41-Lq8" id="qKR-5x-oVT"/>
+                            <outlet property="delegate" destination="kdv-41-Lq8" id="P08-9j-Deb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Git Repo List" id="e46-oX-Wp8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJv-Oj-o0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1072.8" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9cb-fu-tvw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dyh-4f-YSG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CiI-kq-DNf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kdv-41-Lq8" kind="relationship" relationship="rootViewController" id="kMD-LM-Kg0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCG-Ib-sVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

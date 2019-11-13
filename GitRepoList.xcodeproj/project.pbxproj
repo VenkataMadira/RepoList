@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C7BD7443237B3DFD002A2FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7442237B3DFD002A2FC1 /* AppDelegate.swift */; };
-		C7BD7445237B3DFD002A2FC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7444237B3DFD002A2FC1 /* ViewController.swift */; };
 		C7BD7448237B3DFD002A2FC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BD7446237B3DFD002A2FC1 /* Main.storyboard */; };
 		C7BD744A237B3DFE002A2FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BD7449237B3DFE002A2FC1 /* Assets.xcassets */; };
 		C7BD744D237B3DFE002A2FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BD744B237B3DFE002A2FC1 /* LaunchScreen.storyboard */; };
 		C7BD7458237B3DFF002A2FC1 /* GitRepoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7457237B3DFF002A2FC1 /* GitRepoListTests.swift */; };
 		C7BD7463237B3DFF002A2FC1 /* GitRepoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7462237B3DFF002A2FC1 /* GitRepoListUITests.swift */; };
+		C7BD7472237B3EF7002A2FC1 /* GitRepoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7471237B3EF7002A2FC1 /* GitRepoListTableViewController.swift */; };
+		C7BD7475237B433B002A2FC1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7474237B433B002A2FC1 /* WebService.swift */; };
+		C7BD7478237B46F5002A2FC1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD7477237B46F5002A2FC1 /* Repository.swift */; };
+		C7BD747B237C30A9002A2FC1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD747A237C30A9002A2FC1 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		C7BD743F237B3DFD002A2FC1 /* GitRepoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BD7442237B3DFD002A2FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7BD7444237B3DFD002A2FC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7BD7447237B3DFD002A2FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7BD7449237B3DFE002A2FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7BD744C237B3DFE002A2FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		C7BD745E237B3DFF002A2FC1 /* GitRepoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitRepoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BD7462237B3DFF002A2FC1 /* GitRepoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoListUITests.swift; sourceTree = "<group>"; };
 		C7BD7464237B3DFF002A2FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BD7471237B3EF7002A2FC1 /* GitRepoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoListTableViewController.swift; sourceTree = "<group>"; };
+		C7BD7474237B433B002A2FC1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C7BD7477237B46F5002A2FC1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C7BD747A237C30A9002A2FC1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		C7BD7441237B3DFD002A2FC1 /* GitRepoList */ = {
 			isa = PBXGroup;
 			children = (
+				C7BD7479237C308C002A2FC1 /* CustomCell */,
+				C7BD7476237B4673002A2FC1 /* Models */,
+				C7BD7473237B4319002A2FC1 /* Services */,
+				C7BD7470237B3ECC002A2FC1 /* Controllers */,
 				C7BD7442237B3DFD002A2FC1 /* AppDelegate.swift */,
-				C7BD7444237B3DFD002A2FC1 /* ViewController.swift */,
 				C7BD7446237B3DFD002A2FC1 /* Main.storyboard */,
 				C7BD7449237B3DFE002A2FC1 /* Assets.xcassets */,
 				C7BD744B237B3DFE002A2FC1 /* LaunchScreen.storyboard */,
@@ -123,6 +132,38 @@
 				C7BD7464237B3DFF002A2FC1 /* Info.plist */,
 			);
 			path = GitRepoListUITests;
+			sourceTree = "<group>";
+		};
+		C7BD7470237B3ECC002A2FC1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7BD7471237B3EF7002A2FC1 /* GitRepoListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C7BD7473237B4319002A2FC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C7BD7474237B433B002A2FC1 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C7BD7476237B4673002A2FC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7BD7477237B46F5002A2FC1 /* Repository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7BD7479237C308C002A2FC1 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7BD747A237C30A9002A2FC1 /* TableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7BD7445237B3DFD002A2FC1 /* ViewController.swift in Sources */,
+				C7BD747B237C30A9002A2FC1 /* TableViewCell.swift in Sources */,
+				C7BD7475237B433B002A2FC1 /* WebService.swift in Sources */,
+				C7BD7472237B3EF7002A2FC1 /* GitRepoListTableViewController.swift in Sources */,
 				C7BD7443237B3DFD002A2FC1 /* AppDelegate.swift in Sources */,
+				C7BD7478237B46F5002A2FC1 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
