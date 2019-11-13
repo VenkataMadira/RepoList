@@ -14,11 +14,11 @@ public struct Repository {
     let description : String
     
     init(_ dictionary: [String: Any]) {
-      
+        
         self.name = dictionary["name"] as? String ?? ""
         self.description = dictionary["description"] as? String ?? ""
     }
-
+    
 }
 
 

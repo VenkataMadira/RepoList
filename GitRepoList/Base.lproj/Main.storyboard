@@ -12,7 +12,7 @@
         <!--Git Repo List-->
         <scene sceneID="vzX-6y-j68">
             <objects>
-                <tableViewController id="kdv-41-Lq8" customClass="GitRepoListTableViewController" customModule="GitRepoList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GitRepoListTableViewController" id="kdv-41-Lq8" customClass="GitRepoListTableViewController" customModule="GitRepoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mpj-HC-0sx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

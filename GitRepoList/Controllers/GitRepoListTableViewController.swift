@@ -16,7 +16,9 @@ class GitRepoListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setup()
-         tableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
     }
     
@@ -40,13 +42,13 @@ class GitRepoListTableViewController: UITableViewController {
             if (results.count>0){
                 //update table view
                 self.repoLists.append(contentsOf: results)
-                 DispatchQueue.main.async {
+                DispatchQueue.main.async {
                     activityIndicator.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
                     self.tableView.reloadData()
                 }
             }
-        
+            
         }
     }
     
@@ -62,8 +64,10 @@ class GitRepoListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? TableViewCell else{
             return UITableViewCell()
         }
-        cell.repoName.text = repoLists[indexPath.row].name.capitalized
-        cell.repoDescription.text = repoLists[indexPath.row].description
-      return cell
+        if(repoLists.count>0){
+            cell.repoName.text = repoLists[indexPath.row].name.capitalized
+            cell.repoDescription.text = repoLists[indexPath.row].description
+        }
+        return cell
     }
 }

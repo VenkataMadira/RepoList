@@ -26,15 +26,15 @@ class WebService{
                 guard let jsonArray = jsonResponse as? [[String: Any]] else {
                     return
                 }
-              //  print(jsonArray)
+                //  print(jsonArray)
                 for dic in jsonArray{
                     model.append(Repository(dic)) // adding now value in Model array
                 }
                 completion(model)
                 /*for dic in jsonArray{
-                    guard let title = dic["name"] as? String else { return }
-                    print(title) //Output
-                }*/
+                 guard let title = dic["name"] as? String else { return }
+                 print(title) //Output
+                 }*/
                 
                 
             } catch let parsingError {
@@ -42,6 +42,6 @@ class WebService{
             }
         }
         task.resume()
-    
+        
     }
 }
